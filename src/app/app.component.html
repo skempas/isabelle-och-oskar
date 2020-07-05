@@ -1,8 +1,36 @@
-<div class="row no-gutters bg-dark p-3 sticky-top">
-  <div class="col-auto mr-3">
-    <a class="text-white" routerLink="/first-component" routerLinkActive="active">Startsidan</a></div>
-  <div class="col-auto mr-3">
-    <a class="text-white" routerLink="/second-component" routerLinkActive="active">Program</a></div>
+<div class="row no-gutters w-100 h-25 flex-row-reverse bg-light">
+  <button class="btn" (click)="toggleMenu()">
+    <svg viewBox="0 0 100 80" width="40" height="40">
+      <rect width="100" height="20"></rect>
+      <rect y="30" width="100" height="20"></rect>
+      <rect y="60" width="100" height="20"></rect>
+    </svg>  
+  </button>
 </div>
+
+<ng-container *ngIf="showMenu">
+<div id="dropdown" class="position-absolute bg-light w-100 h-100">
+  <div class="text-right p-2">
+    <a (click)="toggleMenu()" class="" routerLink="/" routerLinkActive="active">Start</a></div>
+  <div class="text-right p-2">
+    <a (click)="toggleMenu()" class="" routerLink="/schema" routerLinkActive="active">Program</a>
+  </div>
+  <div class="text-right p-2">
+      <a (click)="toggleMenu()" class="" routerLink="/boende" routerLinkActive="active">Boende</a>
+  </div>
+  <div class="text-right p-2">
+        <a (click)="toggleMenu()" class="" routerLink="/personer" routerLinkActive="active">Personer</a>
+  </div>
+  <div class="text-right p-2">
+          <a (click)="toggleMenu()" class="" routerLink="/ovrigt" routerLinkActive="active">Övrigt</a>
+  </div>
+  <div class="text-right p-2">
+            <a (click)="toggleMenu()" class="" routerLink="/dresscode" routerLinkActive="active">Dresscode</a>
+  </div>
+  <div class="text-right p-2">
+    <a (click)="toggleMenu()" class="" routerLink="/present" routerLinkActive="active">Gåvor</a>
+  </div>
+</div>
+</ng-container>
 
 <router-outlet></router-outlet>

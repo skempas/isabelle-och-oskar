@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'isabelle-och-oskar';
+  showMenu: boolean = false;
+
+  toggleMenu(){
+    this.showMenu = !this.showMenu;
+  }
 }
