@@ -16,7 +16,7 @@ const routes: Routes = [
     { path: 'personer', component: PeopleComponent },
     { path: 'boende', component: AccommodationComponent },
     { path: 'start', component: FirstComponent },
-    { path: '', component: FirstComponent }
+    { path: '', redirectTo: 'start', pathMatch: 'full'}
 
   ];
 // configures NgModule imports and exports
