@@ -1,36 +1,34 @@
-<div class="row no-gutters w-100 h-25 flex-row-reverse bg-light">
-  <button class="btn" (click)="toggleMenu()">
-    <svg viewBox="0 0 100 80" width="40" height="40">
-      <rect width="100" height="20"></rect>
-      <rect y="30" width="100" height="20"></rect>
-      <rect y="60" width="100" height="20"></rect>
+<div class="navbar row no-gutters w-100 pb-0">
+  <button class="btn pl-0" (click)="toggleMenu()">
+    <svg style="fill: #1A1423" viewBox="0 0 100 80" width="40" height="40">
+      <rect rx="10" ry="10" width="100" height="20"></rect>
+      <rect y="30" rx="10" ry="10" width="100" height="20"></rect>
+      <rect y="60" rx="10" ry="10" width="100" height="20"></rect>
     </svg>  
   </button>
 </div>
 
-<ng-container *ngIf="showMenu">
-<div id="dropdown" class="position-absolute bg-light w-100 h-100">
-  <div class="text-right p-2">
-    <a (click)="toggleMenu()" class="" routerLink="/" routerLinkActive="active">Start</a></div>
-  <div class="text-right p-2">
-    <a (click)="toggleMenu()" class="" routerLink="/schema" routerLinkActive="active">Program</a>
+<div class="row no-gutters">
+  <div class="col-12">
+    <div id="dropdown" class="bg-white" [@slideInOut]="menuState">
+      <ul class="text-right list-group list-group-flush">
+        <li (click)="toggleMenu()" class="p-2 list-group-item" routerLink="start" routerLinkActive="active">Start</li>
+        <li (click)="toggleMenu()" class="p-2 list-group-item" routerLink="schema" routerLinkActive="active">Program</li>
+        <li (click)="toggleMenu()" class="p-2 list-group-item" routerLink="boende" routerLinkActive="active">Boende</li>
+        <li (click)="toggleMenu()" class="p-2 list-group-item" routerLink="personer" routerLinkActive="active">Personer</li>
+        <li (click)="toggleMenu()" class="p-2 list-group-item" routerLink="ovrigt" routerLinkActive="active">Övrigt</li>
+        <li (click)="toggleMenu()" class="p-2 list-group-item" routerLink="dresscode" routerLinkActive="active">Dresscode</li>
+        <li (click)="toggleMenu()" class="p-2 list-group-item" routerLink="present" routerLinkActive="active">Gåvor</li>
+      </ul>
+    </div>
   </div>
-  <div class="text-right p-2">
-      <a (click)="toggleMenu()" class="" routerLink="/boende" routerLinkActive="active">Boende</a>
+  <div class="col-12">
+    <div class="position-absolute main-container">
+      <router-outlet></router-outlet>
+      </div>
   </div>
-  <div class="text-right p-2">
-        <a (click)="toggleMenu()" class="" routerLink="/personer" routerLinkActive="active">Personer</a>
-  </div>
-  <div class="text-right p-2">
-          <a (click)="toggleMenu()" class="" routerLink="/ovrigt" routerLinkActive="active">Övrigt</a>
-  </div>
-  <div class="text-right p-2">
-            <a (click)="toggleMenu()" class="" routerLink="/dresscode" routerLinkActive="active">Dresscode</a>
-  </div>
-  <div class="text-right p-2">
-    <a (click)="toggleMenu()" class="" routerLink="/present" routerLinkActive="active">Gåvor</a>
-  </div>
-</div>
-</ng-container>
 
-<router-outlet></router-outlet>
+</div>
+<ng-container *ngIf="menuState==='in'" > 
+  <div class="backdrop" (click)="toggleMenu()"></div> </ng-container>
+

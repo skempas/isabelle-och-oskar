@@ -15,7 +15,9 @@ const routes: Routes = [
     { path: 'ovrigt', component: MiscComponent },
     { path: 'personer', component: PeopleComponent },
     { path: 'boende', component: AccommodationComponent },
+    { path: 'start', component: FirstComponent },
     { path: '', component: FirstComponent }
+
   ];
 // configures NgModule imports and exports
 @NgModule({

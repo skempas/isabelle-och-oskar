@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-image: url("./assets/img/500_F_159555795_xlMGpGlglQeqTCsdRgciIRVXHZNI4ahr.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Open Sans Condensed', sans-serif;
+    background-size: cover;
+  }
+
+  .container-content{
+      font-size: 1.5rem;
+      text-align: center;
+      margin: 0 1rem;
+  }

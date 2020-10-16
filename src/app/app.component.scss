@@ -1,7 +1,19 @@
 #dropdown{
-    z-index: 1020;
+    height: 101vh;
+    top: -4rem;
+    position: absolute;
     font-size: xx-large;
-    a {
-        color: black;
-    }
+    z-index: 1050;
 }
+
+.backdrop{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(5px);
+}
+
+img {
+    border-radius: 50%;
+  }
