@@ -1,7 +1,7 @@
 #dropdown{
     height: 101vh;
-    top: -4rem;
-    position: absolute;
+    position: fixed;
+    top: 0;
     font-size: xx-large;
     z-index: 1050;
 }
@@ -10,8 +10,12 @@
     position: absolute;
     top: 0;
     width: 100vw;
-    height: 100vh;
+    height: 1000vh;
     backdrop-filter: blur(5px);
+}
+
+.main-container{
+    margin: 4rem 0;
 }
 
 img {
