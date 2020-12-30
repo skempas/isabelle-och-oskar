@@ -10,6 +10,8 @@ import { AccommodationComponent } from './accommodation/accommodation.component'
 import { GiftComponent } from './gift/gift.component';
 import { PeopleComponent } from './people/people.component';
 import { MiscComponent } from './misc/misc.component';
+import { SpexComponent } from './spex/spex.component';
+import { MenuComponent } from './menu/menu.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { MiscComponent } from './misc/misc.component';
     AccommodationComponent,
     GiftComponent,
     PeopleComponent,
-    MiscComponent
+    MiscComponent,
+    SpexComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

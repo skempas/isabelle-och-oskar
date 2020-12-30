@@ -1,9 +1,10 @@
 #dropdown{
-    height: 101vh;
+    height: 100vh;
     position: fixed;
     top: 0;
     font-size: xx-large;
     z-index: 1050;
+    overflow: auto;
 }
 
 .backdrop{
@@ -15,8 +16,11 @@
 }
 
 .main-container{
-    background-color: D4EAF7;
-    margin: 4rem 0;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 3rem;
 }
 
 img {
