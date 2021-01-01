@@ -5,6 +5,7 @@
     font-size: xx-large;
     z-index: 1050;
     overflow: auto;
+    color: black;
 }
 
 .backdrop{
@@ -18,11 +19,22 @@
 .main-container{
     text-align: center;
     font-size: 1.5rem;
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 3rem;
 }
 
 img {
     border-radius: 50%;
   }
+
+li {
+    cursor: pointer;
+}
+
+
+  @media (min-width: 768px) {
+    .main-container{
+        max-width: 70vw;
+    }
+}

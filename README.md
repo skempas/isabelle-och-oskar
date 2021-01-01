@@ -29,3 +29,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 🌹  ng build --prod --base-href https://skempas.github.io/isabelle-och-oskar/
 🌹  ngh --dir=dist/isabelle-och-oskar
+🌹  ng deploy --base-href=https://xn--isabelleoskarbrllop-46b.se --cname=xn--isabelleoskarbrllop-46b.se
