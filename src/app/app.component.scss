@@ -6,6 +6,9 @@
     z-index: 1050;
     overflow: auto;
     color: black;
+    @media (min-width: 768px) {
+        max-width: 20vw;
+    }
 }
 
 .backdrop{
